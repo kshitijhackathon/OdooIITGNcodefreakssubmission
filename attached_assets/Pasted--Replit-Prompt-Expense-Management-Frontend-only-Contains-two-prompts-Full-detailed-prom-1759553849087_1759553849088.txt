@@ -1,0 +1,81 @@
+# Replit Prompt — Expense Management (Frontend-only)
+
+> Contains two prompts: **Full detailed prompt** and a **Short/compact prompt** you can paste into Replit's AI box.
+
+---
+
+## Full Prompt (Detailed)
+
+**Build a complete frontend-only Expense Management Web App** (React + Vite + Tailwind CSS). Don’t include any backend or database logic yet — only the **UI, routing, and components**.
+
+**Project Requirements**
+
+**Tech stack:**
+
+* React (with Vite)
+* React Router (for page navigation)
+* Tailwind CSS (for styling)
+* No backend, no API calls — only static data for now.
+
+**Routes (keep each route separate — each page in `src/pages/`):**
+
+1. `/login` → Login/Signup Page: simple form for email, password, and “Signup”/“Login” buttons.
+2. `/dashboard` → Admin Dashboard: show buttons/links to manage Employees, Managers, Approval Rules, View All Expenses.
+3. `/employee` → Employee Dashboard: form to submit new expense (amount, category, date, description, receipt upload) + table/list of submitted expenses with status.
+4. `/manager` → Manager Dashboard: list of expenses awaiting approval + Approve/Reject actions with comment.
+5. `/rules` → Approval Rules Configuration Page: UI to configure Percentage approval, Specific approver, Hybrid rule.
+6. `/ocr` → OCR Simulation Page: upload input + mock auto-filled data area to simulate OCR.
+
+**Components to include (under `src/components/`):**
+
+* Navbar (links to Dashboard, Employee, Manager, Rules, OCR)
+* Sidebar (optional)
+* Reusable `ExpenseCard` or `ExpenseTable` component
+* Modal for adding/editing expenses
+* Status badges (Approved, Rejected, Pending)
+
+**Design Notes:**
+
+* Clean, modern UI using Tailwind classes
+* Soft shadows, rounded corners, adequate padding
+* Each route page should have a title and clear layout
+* Use dummy JSON for expenses/users; mock data stored in `src/data/` or local state
+
+**Behavior & Details:**
+
+* No real auth: show a mock login state (toggle), but place Login UI at `/login`.
+* Keep routes and pages strictly separate files and use React Router for navigation.
+* Make UI-ready hooks where backend will be later (e.g., `useExpenses()` returning mock data).
+* Keep components reusable and accessible (forms with labels, semantic HTML).
+* Provide a single example of currency conversion display (show company default currency and indicate multi-currency amounts as mock text) — but do not call external APIs.
+
+**File Organization Suggestion:**
+
+```
+src/
+  components/
+  pages/
+    Login.jsx
+    Dashboard.jsx
+    Employee.jsx
+    Manager.jsx
+    Rules.jsx
+    OCR.jsx
+  data/
+    mockExpenses.js
+  App.jsx
+  main.jsx
+  index.css (Tailwind)
+```
+
+**Goal:** Deliver a visually functional prototype (frontend-only) with all routes/pages/components implemented and easy-to-replace mock data hooks for future backend integration.
+
+---
+
+## Short Prompt (Compact)
+
+`Create a frontend-only Expense Management app using React + Vite + Tailwind. Implement separate routes (Login, Dashboard, Employee, Manager, Rules, OCR) using React Router. Put each route in its own file under src/pages/, reusable components under src/components/, and mock data in src/data/. No backend or API calls — only UI, forms, modals, tables, and mock flows. Focus on clean Tailwind styling and component reusability.`
+
+---
+
+*Use either the Full Prompt for detailed generation or the Short Prompt for quick paste into Replit's AI prompt box.*
