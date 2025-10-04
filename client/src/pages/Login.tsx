@@ -15,6 +15,7 @@ import { mockUsers } from "@/data/mockData";
 import { LogIn, UserPlus, Mail, Lock, User, DollarSign, Moon, Sun } from "lucide-react";
 import { currencies } from "@/data/mockData";
 import { useTheme } from "@/components/ThemeProvider";
+import { Logo } from "@/components/Logo";
 
 export default function Login() {
   const [, setLocation] = useLocation();
@@ -71,8 +72,8 @@ export default function Login() {
 
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground mb-4">
-            <span className="font-mono text-2xl font-bold">EM</span>
+          <div className="flex justify-center mb-4">
+            <Logo size="lg" showText={false} />
           </div>
           <h1 className="text-3xl font-bold text-foreground mb-2">Expense Manager</h1>
           <p className="text-muted-foreground">

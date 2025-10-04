@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, LayoutDashboard, Users, UserCheck, Settings, ScanLine, LogOut } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useTheme } from "@/components/ThemeProvider";
+import { Logo } from "@/components/Logo";
 
 export function Navbar() {
   const [location] = useLocation();
@@ -40,11 +41,8 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-8">
             <Link href="/dashboard">
-              <a className="flex items-center gap-2 text-xl font-bold text-foreground hover-elevate rounded-md px-2 py-1" data-testid="link-logo">
-                <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
-                  <span className="font-mono text-sm">EM</span>
-                </div>
-                <span>Expense Manager</span>
+              <a className="hover-elevate rounded-md px-2 py-1" data-testid="link-logo">
+                <Logo size="sm" showText={true} />
               </a>
             </Link>
 
